@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	r := mux.NewROuter()
+	r := mux.NewRouter()
 
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	r.HandleFunc("/hello", handler).Methods("GET")
+	http.ListenAndServe(":8080", r)
 }
 
 func handler(w http.ResponseWriter, r *http.Request)  {
-	fmt.Fprintf(w, "Hellow World!")
+	fmt.Fprintf(w, "Hello World!")
 }
