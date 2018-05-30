@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net/http"
 	"encoding/json"
 	"fmt"
+	"net/http"
 )
 
 type Bird struct {
-	Species string `json:"species"`
+	Species     string `json:"species"`
 	Desctiption string `json:"description"`
 }
 

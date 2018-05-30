@@ -1,14 +1,14 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
-	"testing"
-	"encoding/json"
 	"net/url"
-	"bytes"
 	"strconv"
+	"testing"
 )
 
 func TestRouter(t *testing.T) {
@@ -90,7 +90,7 @@ func TestStaticFileServer(t *testing.T) {
 }
 
 func TestGetBirdsHandler(t *testing.T) {
-	birds = []Bird {
+	birds = []Bird{
 		{"sparrow", "A small harmless bird"},
 	}
 
