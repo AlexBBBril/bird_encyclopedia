@@ -1,9 +1,9 @@
- package main
+package main
 
 import (
-	"net/http"
 	"fmt"
 	"github.com/gorilla/mux"
+	"net/http"
 )
 
 func main() {
@@ -18,6 +18,6 @@ func newRouter() *mux.Router {
 	return r
 }
 
-func handler(w http.ResponseWriter, r *http.Request)  {
+func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello World!")
 }
